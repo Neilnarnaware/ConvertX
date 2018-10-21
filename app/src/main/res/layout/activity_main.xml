@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.neil_narnaware.convertx.MainActivity"
+    android:background="@color/button_material_dark">
+
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Welcome to ConvertX"
+        android:id="@+id/welcometext"
+        android:gravity="center"
+        android:textColor="@color/material_grey_50"
+        android:background="#6d6565"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/txtchoose"
+        android:layout_alignEnd="@+id/txtchoose" />
+
+    <TextView
+        android:layout_width="400dp"
+        android:layout_height="60dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Choose element to CONVERT"
+        android:id="@+id/txtchoose"
+        android:gravity="center"
+        android:background="#7d7676"
+        android:textColor="@color/primary_material_light"
+        android:layout_below="@+id/welcometext"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="38dp" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/radioGroup"
+        android:gravity="left|center_vertical|center"
+        android:layout_below="@+id/txtchoose"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#c3c2c2">
+
+        <RadioButton
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:text="Temperature"
+            android:id="@+id/rbd1"
+            android:layout_gravity="center_horizontal"
+            android:checked="false"
+            android:layout_marginLeft="10dp"
+            android:textColor="#040404"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:text="length"
+            android:id="@+id/rbd2"
+            android:layout_gravity="center_horizontal"
+            android:checked="false"
+            android:textColor="#040404"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:text="currency"
+            android:id="@+id/rbd3"
+            android:layout_gravity="center_horizontal"
+            android:checked="false"
+            android:textColor="#040404"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:text="Weight"
+            android:id="@+id/rbd4"
+            android:layout_gravity="center_horizontal"
+            android:checked="false"
+            android:textColor="#040404"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:text="Volume"
+            android:id="@+id/rbd5"
+            android:layout_gravity="center_horizontal"
+            android:checked="false"
+            android:textColor="#040404"
+            android:textSize="20dp" />
+
+    </RadioGroup>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SUBMIT"
+        android:id="@+id/submitbtn"
+        android:layout_below="@+id/radioGroup"
+        android:layout_alignRight="@+id/radioGroup"
+        android:layout_alignEnd="@+id/radioGroup" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pbar"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:indeterminate="false"
+        android:visibility="invisible" />
+
+</RelativeLayout>
